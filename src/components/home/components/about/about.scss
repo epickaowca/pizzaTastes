@@ -1,0 +1,143 @@
+@import '../../../../config';
+
+.about{
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: white;
+    
+    &_container{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        @include res(768px){
+            display: block;
+        }
+       
+        &_features{
+            max-width: 1200px;
+            position: relative;
+            margin: 0 auto;
+            margin-top: 0px;
+            display: flex;
+            flex-direction: column;
+            max-width: 550px;
+            @include res(1100px){
+                flex-direction: row;
+                max-width: 900px;
+            }
+        
+            @include res(1400px){
+                max-width: 1200px;
+            }
+            &_circle{
+                @include res(768px){
+                    display: flex;
+                    justify-content: space-around;
+                }
+              
+                & div{
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 50%;
+                    border: 8px solid $mainColor;
+                    display: flex;
+                    margin: 25px 0;
+               
+                    @include res(1400px){
+                        width: 150px;
+                        height: 150px;
+                        margin-right: 55px;
+                    }
+                    & p{
+                        width: 100px;
+                        margin: auto;
+                        text-align: center;
+                        
+                        @include res(1400px){
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+            
+            }
+            & img{
+                display: none;
+                @include res(768px){
+                    display: block;
+                    width: 400px;
+                    margin: auto;
+                }
+                @include res(1100px){
+                    margin-top: 25px;
+                }
+                @include res(1400px){
+                    width: 500px;
+                }
+            }
+
+        }
+        &_bs{
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            max-width: 1200px;
+            @include res(768px){
+                flex-direction: row-reverse;
+            }
+            @include res(1100px){
+                margin: 0 auto;
+                margin-top: -100px;
+            }
+            &_chef{
+                width: 100%;
+                max-width: 400px;
+                margin: 0 auto;
+                margin-top: 25px;
+                margin-bottom: 20px;
+                @include res(1100px){
+                    max-width: 600px;
+                }
+            }
+            &_title{
+                text-align: center;
+                @include res(768px){
+                    text-align: right;
+                    float: left;
+                    margin-right: 45px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+                @include res(1100px){
+                    margin-top: 150px;
+                }
+                & h1{
+                    color: #393939;
+                    margin: 0 auto;
+                    font-size: 1.8rem;
+                    width: 100%;
+                    max-width: 350px;
+                    @include res(768px){
+                        font-size: 1.5rem;
+                    }
+                    @include res(1100px){
+                        font-size: 2rem;
+                    }
+                }
+                & p{
+                    margin: 25px auto ;
+                    color: #444444;
+                    max-width: 400px;
+                    display: none;
+                    @include res(768px){
+                        width: 350px;
+                        margin: 50px auto;
+                        max-width: 400px;
+                        display: block;
+                    }
+                }   
+            }
+        }
+    }
+}

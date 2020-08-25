@@ -1,0 +1,256 @@
+@import '../../../../config';
+.mainSection{
+    position: relative;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    @include res(768px){
+        width: 50%;
+        margin-left: 250px;
+    }
+    @include res(930px){
+        width: 70%;
+        margin-left: 200px;
+    }
+    @include res(1200px){
+        margin-left: 250px;
+    }
+    &_details{
+        display: flex;
+        border-radius: 15px;
+        box-shadow: -10px -10px 10px rgba(255,255,255,.5), 10px 10px 10px rgba(70,70,70,0.12);
+        padding: 10px;
+        width: 100%;
+        margin-top: 30px;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 55px;
+        @include res(768px){
+            position: absolute;
+            width: 600px;
+            transform: translateX(-50px);
+        }
+        @include res(930px){
+            width: 100%;
+            padding: 0 50px;
+        }
+        &_back{
+            display: none;
+            width: 100%;
+            padding: 25px 0px;
+            margin-bottom: 20px;
+            justify-content: flex-end;
+            @include res(768px){
+                display: flex;
+            }
+            & button{
+                cursor: pointer;
+                display: flex;
+                background-color: white;
+                border: none;
+                border-radius: 5px;
+                padding: 0 10px;
+                width: 180px;
+                height: 40px;
+                justify-content: space-between;
+                align-items: center;
+                & img{
+                    width: 10px;
+                }
+                & p{
+                    font-size: 1rem;
+                    color: $color1;
+                }
+            }
+        }
+        &_main{
+            display: flex;
+            flex-direction: column;
+            @include res(768px){
+                flex-direction: row-reverse;
+            }
+            @include res(930px){
+                width: 100%;
+            }
+            &_img{
+                margin: auto;
+                margin-bottom: 25px;
+                @include res(768px){
+                    width: 100%;
+                    text-align: right;
+                    padding: 15px;
+                }
+            }
+            &_descr{
+                text-align: center;
+                max-width: 400px;
+                @include res(768px){
+                    text-align: left;
+                }
+                & h1{
+                    margin-bottom: 25px;
+                }
+            }
+        }
+        &_price{
+            max-width: 350px;
+            margin-top: 25px;
+            width: 100%;
+            color: #65129C;
+            font-weight: bold;
+            @include res(768px){
+                max-width: 100%;
+            }
+        }
+        &_button{
+            max-width: 350px;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: flex-end;
+            @include res(768px){
+                max-width: 100%;
+            }
+            & button{
+                cursor: pointer;
+                outline: unset;
+                font-size: 1rem;
+                padding: 5px;
+                &:nth-child(1){
+                    color: white;
+                    margin-bottom: 25px;
+                    width: 105px;
+                    background-color: #65129C;
+                    border: unset;
+                }
+                &:nth-child(2){
+                    width: 200px;
+                    border: 2px solid #65129C;
+                    background-color: transparent;
+                }
+            }
+        }
+        &_spec{
+            margin-top: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            @include res(600px){
+                justify-content: space-evenly;
+                width: 90%;
+            }
+            & div{
+                border-radius: 15px;
+                margin: 5px;
+                text-align: center;
+                box-shadow: -10px -10px 10px rgba(255,255,255,.5), 10px 10px 10px rgba(70,70,70,0.12);
+                padding: 15px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                width: 80px;
+                height: 80px;
+                
+                & p {
+                    &:nth-child(1){
+                        margin-bottom: 25px;
+                    }
+                    &:nth-child(2){
+                        color: $color1;
+                        margin-bottom: -5px;
+                    }
+                }
+            }
+            margin-bottom: 15px;
+        }
+
+    }
+
+    &_itemContainer{
+        
+        position: relative;
+        flex: 1 0 50%;
+        display: flex;
+        max-height: 180px;
+        margin-top: 50px;
+        margin-bottom: 0px;
+        @include res(600px){
+            margin-bottom: 25px;
+        }
+        @include res(930px){
+            flex: 1 0 30%;
+        }
+        &_item{
+            cursor: pointer;
+            position: relative;
+            margin: auto;
+            width: 130px;
+            height: 90px;
+            background-color: #F5F5F5;
+            border-radius: 10px;
+            box-shadow: -10px -10px 15px rgba(255,255,255,.5), 10px 10px 15px rgba(70,70,70,0.12);
+            border: 1px solid white;
+            &:hover{
+                box-shadow: inset -3px -3px 7px #fff, inset 3px 3px 5px rgba(94,104,121,0.288);
+            }
+            @include res(600px){
+                width: 160px;
+                height: 120px;
+            }
+            @include res(1200px){
+                width: 200px;
+                height: 150px;
+            }
+            & img{
+                position: absolute;
+                top: -20px;
+                left: 50%;
+                height: 50px;
+                transform: translateX(-50%);
+                @include res(600px){
+                    height: 70px;
+                }
+                @include res(1200px){
+                    height: 90px;
+                }
+            }
+         
+            &_name{
+                position: absolute;
+                top: 70%;
+                margin-left: 5px;
+                transform: translateY(-50%);
+                @include res(600px){
+                    margin-left: 10px;
+                }
+
+                & h1{
+                    font-size: .8rem;
+                    white-space: nowrap;
+                    font-weight: normal;
+                    @include res(600px){
+                        font-size: 1rem;
+                    }
+                    @include res(1200px){
+                        font-size: 1.2rem;
+                    }
+                }
+                & p{
+                    color: $color1;
+                    font-size: .8rem;
+                    @include res(600px){
+                        font-size: .9rem;
+                    }
+                    @include res(1200px){
+                        font-size: 1.3rem;
+                        margin-left: 3px;
+                    }
+                }
+            } 
+        } 
+    }
+}

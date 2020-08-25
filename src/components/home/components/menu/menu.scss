@@ -1,0 +1,145 @@
+@import '../../../../config';
+
+.menu{
+    min-height: 100vh;
+    background-color: $secondColor;
+
+    &_container{
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+        justify-items: right;
+        @include res(768px){
+            flex-direction: row-reverse;
+            justify-content: space-around;
+        }
+        @include res(1400px){
+            max-width: 1300px;
+            margin: auto;
+        }
+        &_info{
+            display: flex;
+            flex-direction: column;
+            &_h1{
+                margin-top: 15px;
+                line-height: 35px;
+                & h1{
+                    margin-right: 25px;
+                    float: right;
+                    width: 290px;
+                    font-size: 1.6rem;
+                    margin-bottom: 15px;
+                    @include res(768px){
+                        float: unset;
+                        margin: unset;
+                        text-align: left;
+                    }
+                    @include res(1400px){
+                        font-size: 2.5rem;
+                        width: 450px;
+                        line-height: 50px;
+                    }
+                }
+                & p{
+                    display: none;
+                    @include res(768px){
+                        display: block;
+                        text-align: left;
+                        max-width: 385px;
+                        margin-top: 25px;
+                    }
+                    @include res(1400px){
+                        font-size: 1.5rem;
+                        max-width: 500px;
+                        margin-bottom: 25px;
+                    }
+                }
+            }
+            &_link{
+                margin-right: 25px;
+                z-index: 1;
+              
+                & p{
+                    cursor: pointer;
+                    margin-bottom: 10px;
+                    color: #AEAEAE;
+                    font-weight: bold;
+                }
+                & img{
+                    cursor: pointer;
+                }
+            }
+        }
+
+     
+        &_imgMenu{
+            width: 80%;
+            max-width: 350px;
+            margin: auto;
+            margin-top: -75px;
+            @include res(768px){
+                width: 350px;
+                margin: unset;
+                margin-left: 15px;
+                margin-top: 15px;
+            }
+            @include res(1400px){
+                max-width: 500px;
+                width: 80%;
+            }
+        }
+    }
+    &_catalog{
+        margin-top: 45px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        @include res(768px){
+            flex-direction: row;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: 1200px;
+        }
+        & div{
+            max-width: 300px;
+            cursor: pointer;
+            position: relative;
+            width: 80%;
+            margin: 25px auto;
+            overflow: hidden;
+            @include res(768px){
+                width: 350px;
+                max-width: 350px;
+            }
+            &:hover > a img{
+                transform: scale(1.2);
+            }
+            &:hover > a span{
+                background: #65129C;
+                color: white;
+                opacity: 1;
+            }
+            & span{
+                transition: all .4s ease;
+                bottom: 50px;
+                position: absolute;
+                display: block;
+                z-index: 2;
+                background: white;
+                left: 50%;
+                transform: translateX(-50%);
+                padding: 10px;
+                width: 150px;
+                text-align: center;
+                opacity: .7;
+                font-size: 1rem;
+            }
+            & img{
+                transition: all .4s ease;
+                width: 100%;
+            }
+        }
+    }
+}

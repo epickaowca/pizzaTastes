@@ -1,0 +1,7 @@
+$mainColor: #FFAF37;
+$secondColor: #F2F2F2;
+$color1: #707070;
+
+@mixin  res($breakpoint){
+    @media only screen and (min-width: $breakpoint){@content}
+}

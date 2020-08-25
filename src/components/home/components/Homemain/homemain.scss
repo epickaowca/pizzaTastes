@@ -1,0 +1,202 @@
+@import '../../../../config';
+
+.HomeMain{
+    overflow-x: hidden;
+    background: $secondColor;
+    width: 100vw;
+    min-height:100vh;
+    &_container{
+        display: flex;
+        flex-direction: column;
+        max-width: 1900px;
+        @include res(1900px){
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        & header{
+            display: flex;
+            position: relative;
+            width: 100%;
+            height: 100px;
+            background-color: $secondColor;
+
+            & button{
+                all: unset;
+                width: 50px;
+                height: 20px;
+                position: absolute;
+                right: 25px;
+                top: 25px;
+                cursor: pointer;
+                @include res(768px){
+                    display: none;
+                }
+                & span{
+                    position: absolute;
+                    display: block;
+                    height: 2px;
+                    background-color: black;
+                    
+                    &:nth-child(1){
+                        width: 50px;
+                        top: 0;
+                    }
+                    &:nth-child(2){
+                        width: 20px;
+                        top: 50%;
+                    }
+                    &:nth-child(3){
+                        width: 30px;
+                        bottom: 0;
+                    }
+                }
+            }
+
+            & nav{
+                transform: translateX(100%);
+                height: 30px;
+                width: 100%;
+                margin: 70px auto;
+                line-height: 30px;
+                display: flex;
+                justify-content: center;
+                @include res(768px){
+                    justify-content: flex-end;
+                    transform: translateX(0px) !important;
+                }
+                & ul{
+                    width: 500px;
+                    display: flex;
+                    justify-content: space-around;
+                    @include res(768px){
+                        margin-right: 250px;
+                    }
+                    @include res(1000px){
+                        margin-right: 450px;
+                    }
+                    @include res(1400px){
+                        width: 800px;
+                    }
+                    & li{
+                        cursor: pointer;
+                        color: #AEAEAE;
+                        list-style-type: none;
+                        @include res(768px){
+                            margin-top: 5px;
+                            font-size: 1rem;
+                            font-weight: bold;
+                            @include res(1000px){
+                                font-size: 1.5rem;
+                            }
+                            @include res(1400px){
+                                font-size: 2rem;
+                            }
+                        }
+                    
+                    }
+                }
+            }
+        }
+        &_main{
+
+            display: flex;
+            flex-direction: column;
+            @include res(768px){
+                flex-direction: row;
+            }
+            &_title{
+                display: flex;
+                flex-direction: column;
+                margin: 25px auto;
+                @include res(768px){
+                    margin-top: 250px;
+                    margin-left: 50px;
+                }
+                @include res(1400px){
+                    margin-left: 150px;
+                }
+                & h1{
+                    color: #AEAEAE;
+                    @include res(768px){
+                        font-size: 2.5rem;
+                        margin-bottom: 20px;
+                    }
+                    @include res(1000px){
+                        font-size: 4rem;
+                        margin-top: -100px;
+                        margin-bottom: 50px;
+                    }
+                }
+                & p{
+                    margin-top: 15px;
+                    width: 240px;
+                    color: #707070;
+                    font-size: 1.1rem;
+                    @include res(1000px){
+                        font-size: 1.3rem;
+                        width: 320px;
+                    }
+                }
+                & button{
+                    cursor: pointer;
+                    width: 150px;
+                    margin-top: 25px;
+                    outline: noone;
+                    border: none;
+                    background-color: white;
+                    border-radius: 20px;
+                    color: #65129C;
+                    font-weight: bold;
+                    height: 50px;
+                    font-size: 1rem;
+                    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+                    transition: all 0.3s ease;
+                    &:hover{
+                        background-color: #65129C;
+                        color: white;
+                    }
+                }
+            }
+
+            &_pizzaSharing{
+                margin: 50px auto;
+                position: relative;
+                width: 400px;
+                height: 200px;
+                @include res(768px){
+                    margin-top: 250px;
+                }
+                @include res(1000px){
+                    margin-top: 100px;
+                    width: 700px;
+                    height: 400px;
+                }
+                @include res(1900px){
+                    margin-left: 250px;
+                }
+            }
+        }
+   
+        &_arrowDown{
+            display: none;
+            @include res(768px){
+                display: block;
+                border-radius: 50%;
+                border: none;
+                background-color: white;
+                bottom: 20px;
+                outline: none;
+                cursor: pointer;
+                width: 100px;
+                height: 100px;
+                margin: 0 auto;
+                margin-top: 150px;
+            }
+            & img{
+                width: 70%;
+            }
+        }
+    }        
+}

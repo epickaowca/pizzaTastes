@@ -1,0 +1,181 @@
+@import '../../config';
+.checkOut{
+    width: 100vw;
+    max-width: 600px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    @include res(1000px){
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-evenly;
+        max-width: 1200px;
+        padding: 50px;
+    }
+    &_summary{
+        @include res(1000px){
+            box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5), 10px 10px 15px rgba(70, 70, 70, 0.12);
+            width: 400px;
+            height: 450px;
+            border-radius: 10px;
+        }
+        &_title{
+            text-align: center;
+            margin: 15px 0;
+            color: #464646;
+        }
+
+        &_products{
+            overflow: auto;
+            max-height: 250px;
+            display: flex;
+            flex-direction: column;
+            & div{
+                border-radius: 5px;
+                width: 80%;
+                background-color: white;
+                display: flex;
+                justify-content: space-between;
+                padding: 10px;
+                margin: 20px auto;
+            }
+        }
+        & hr{
+            width: 80%;
+            margin: auto;
+            border: 1px solid $color1;
+            margin-top: 25px;
+        }
+        &_total{
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            margin: 20px auto;
+        }
+    }
+
+    &_form{
+        margin-top: 50px;
+        @include res(1000px){
+            box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5), 10px 10px 15px rgba(70, 70, 70, 0.12);
+            width: 500px;
+            border-radius: 10px;
+            margin-top: 0;
+            padding-left: 50px;
+            padding-top: 20px;
+        }
+        & form{
+            display: flex;
+            flex-direction: column;
+            & label{
+                margin: auto;
+                width: 80%;
+                position: relative;
+                & div{
+                    display: none;
+                    @include res(1000px){
+                        margin: unset;
+                        background: white;
+                        display: block;
+                        width: 50px;
+                        height: 50px;
+                        position: absolute;
+                        border-radius: 50%;
+                        top: 50%;
+                        left: -70px;
+                        transform: translateY(-50%);
+                    }
+                }
+                & p{
+                    font-size: 1rem;
+                    position: absolute;
+                    top: 50%;
+                    left: 15px;
+                    transform: translateY(-50%);
+                    color: $color1;
+                    transition: all .3s ease-in;
+                    @include res(1000px){
+                        font-size: 1.5rem;
+                    }
+                }
+                & input{
+                    background-color: #F5F5F5;
+                    box-shadow: inset -3px -3px 7px #fff, inset 3px 3px 5px rgba(94, 104, 121, 0.288);
+                    border: none;
+                    outline: none;
+                    padding: 10px;
+                    width: 100%;
+                    margin: 15px 0;
+                    @include res(1000px){
+                        margin: 30px 0;
+                        padding: 30px;
+                        font-size: 1rem;
+                    }
+                    
+                    &:focus + p{
+                        top: 0px;
+                        left: 0px;
+                        transform: translateY(-50%);
+                        font-size: .8rem;
+                        opacity: .7;
+                        @include res(1000px){
+                            font-size: 1rem;
+                            top: 15px;
+                        }
+                    }
+                    &:valid + p{
+                        top: 0px;
+                        left: 0px;
+                        transform: translateY(-50%);
+                        font-size: .8rem;
+                        opacity: .7;
+                        @include res(1000px){
+                            font-size: 1rem;
+                            top: 15px;
+                        }
+                    }
+                }
+            }
+            & div{
+                display: flex;
+                flex-direction: column;
+                @include res(1000px){
+                    flex-direction: row;
+                }
+                & div{
+                    margin: auto;
+                    &:nth-child(1){
+                        & button{
+                            background-color: white;
+                        }
+                    }
+                    &:nth-child(2){
+                        & button{
+                            background-color: #464646;
+                            color: white;
+                        }
+                    }
+                    & button{
+                        margin: 10px;
+                        border: none;
+                        outline: none;
+                        padding: 10px;
+                        border-radius: 10px;
+                        font-size: 1rem;
+                        cursor: pointer;
+                        transition: .3s all ease;
+                        &:hover{
+                            padding: 15px;
+                        }
+                       
+                        @include res(1000px){
+                            margin-top: 25px;
+                            font-size: 1.1rem;
+                        }
+                    }
+                }
+                margin-bottom: 50px;
+            }
+        }
+    }
+}

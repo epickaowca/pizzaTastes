@@ -1,0 +1,123 @@
+@import '../../../../config';
+
+.contact{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    &_container{
+        margin: 0 auto;
+        margin-bottom: 100px;
+        text-align: center;
+        position: relative;
+        & h1{
+            width: 250px;
+            margin: 50px auto;
+            color: #AEAEAE;
+            line-height: 45px;
+            @include res(768px){
+                width: 450px;
+            }
+        }
+        &_main{
+            @include res(768px){
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 600px;
+            }
+            @include res(1100px){
+                width: 1050px;
+            }
+            &_food{
+                & button{
+                    all: unset;
+                    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+                    width: 150px;
+                    height: 50px;
+                    border-radius: 20px;
+                    font-weight: bold;
+                    font-size: 1.1rem;  
+                    color: #65129C;
+                    transition: all 0.3s ease;
+                    &:hover{
+                        background-color: #65129C;
+                        color: white;
+                    }
+                }
+                & p{
+                    opacity: 0.8;
+                    margin: 25px 0; 
+                }
+            }
+
+            &_contact{
+                margin-top: 50px;
+                @include res(768px){
+                    margin: unset;
+                }
+                & div{
+                    display: flex;
+                    margin: 15px 0;
+                    align-items: center;
+                    & div{
+                        display: flex;
+                        justify-content: center;
+                        width: 93px;
+                        & img{
+                            transform: scale(.7);
+                            @include res(1100px){
+                                transform: scale(1);
+                            }
+                        }
+                    }
+                    & p {
+                        margin-left: 15px;
+                        white-space: nowrap;
+                        @include res(1100px){
+                            margin-left: 55px;
+                            font-size: 2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &_footer{
+        width: 100vw;
+        height: 100px;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        color: #707070;
+        @include res(768px){
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+        & p {
+            font-size: .8rem;
+            margin-top: 15px;
+        }
+        &_rights{
+            display: flex;
+
+            & p{
+                margin-top: 0px;
+                &:nth-child(1){
+                    margin-right: 25px;
+                }
+            }
+        }
+        &_socials{
+            & img{
+                transform: scale(.5);
+                float: left;
+                @include res(900px){
+                    transform: scale(.7);
+                }
+            }
+        }
+    }
+}

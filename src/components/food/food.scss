@@ -1,0 +1,19 @@
+@import '../../config';
+@import './components/Header/header';
+@import './components/main/main';
+
+body{
+    background-color: #F5F5F5;
+}
+.foodMainContainer{
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
+    background-color: #F5F5F5;
+    max-width: 1300px;
+    @include res(1300px){
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

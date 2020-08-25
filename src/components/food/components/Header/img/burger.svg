@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="38.437" height="32.031" viewBox="0 0 38.437 32.031">
+  <defs>
+    <style>
+      .cls-burger {
+        fill: #707070;
+      }
+    </style>
+  </defs>
+  <g id="burger" transform="translate(0 -4)">
+    <path id="Path_302" data-name="Path 302" class="cls-burger burgerP cls" d="M27.226,4H11.211A11.142,11.142,0,0,0,0,15.211V31.226a4.719,4.719,0,0,0,4.8,4.8H33.633a4.719,4.719,0,0,0,4.8-4.8V15.211A11.142,11.142,0,0,0,27.226,4ZM3.2,18.414H17.3l3.2,3.2H3.2Zm16.5,0H31.23L25.465,24.18ZM35.234,31.226a1.513,1.513,0,0,1-1.6,1.6H4.8a1.513,1.513,0,0,1-1.6-1.6v-1.6H35.234Zm0-3.2H3.2v-3.2H23.7l1.6,1.6,1.6-1.6h8.328Zm0-6.406H30.269l3.2-3.2h1.762Zm0-4.8H3.2v-1.6A7.93,7.93,0,0,1,11.211,7.2H27.226a7.93,7.93,0,0,1,8.008,8.008Z" transform="translate(0 0)"/>
+    <ellipse id="Ellipse_71" data-name="Ellipse 71" class="cls-burger burgerP cls" cx="1.232" cy="2.053" rx="1.232" ry="2.053" transform="translate(24.349 10.153)"/>
+    <circle id="Ellipse_72" data-name="Ellipse 72" class="cls-burger burgerP cls" cx="2.053" cy="2.053" r="2.053" transform="translate(15.302 9.153)"/>
+    <circle id="Ellipse_73" data-name="Ellipse 73" class="cls-burger burgerP cls" cx="2.053" cy="2.053" r="2.053" transform="translate(9.339 10.153)"/>
+  </g>
+</svg>
